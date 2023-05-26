@@ -36,7 +36,17 @@
                 "buttons":[
                   {
                     "type":"postback",
-                    "title":"Start Chatting",
+                    "title":"✅ Get a Clearance Pass",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },
+                  {
+                    "type":"postback",
+                    "title":"😷🏡 COVID-19 Symptom Assessment",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  }  ,
+                  {
+                    "type":"postback",
+                    "title":"🦠💉 Find COVID-19 Vaccine Access Points",
                     "payload":"DEVELOPER_DEFINED_PAYLOAD"
                   }              
                 ]      
