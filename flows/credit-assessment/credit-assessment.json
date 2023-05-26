@@ -1,132 +1,43 @@
 {
   "name": "credit-assessment",
-  "transitionRoutes": [
-    {
-      "intent": "welcome",
-      "condition": "$session.params.resetContexts == true",
-      "targetFlow": "credit-assessment"
+  "displayName": "Credit Assessment",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
     },
-    {
-      "intent": "credit-assessment",
-      "targetFlow": "credit-assessment"
-    }
-  ],
-  "events": [
-    {
-      "name": "welcome",
-      "transition": {
-        "target": "credit-assessment",
-        "condition": "$session.params.resetContexts == true"
-      }
-    }
-  ],
-  "states": [
-    {
-      "name": "welcome",
-      "entryFulfillment": {
-        "messages": [
-          {
-            "text": {
-              "text": [
-                "Welcome to the Credit Assessment Bot. How can I assist you today?"
-              ]
-            }
-          }
-        ]
-      },
-      "transitions": [
-        {
-          "nextPage": "personal-information"
-        }
-      ]
+    "name": "8b09e828-b57f-4685-881f-e0c183f2f035"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
     },
-    {
-      "name": "personal-information",
-      "entryFulfillment": {
-        "messages": [
-          {
-            "text": {
-              "text": [
-                "Sure, I can help you with the credit assessment. Please provide the following personal information:"
-              ]
-            }
-          }
-        ]
-      },
-      "transitions": [
-        {
-          "nextPage": "contact-information"
-        }
-      ],
-      "form": {
-        "parameters": [
-          {
-            "displayName": "First Name",
-            "entityType": "@sys.person",
-            "required": true
-          },
-          {
-            "displayName": "Last Name",
-            "entityType": "@sys.person",
-            "required": true
-          },
-          {
-            "displayName": "Phone Number",
-            "entityType": "@sys.phone-number",
-            "required": true
-          },
-          {
-            "displayName": "Date of Birth",
-            "entityType": "@sys.date",
-            "required": true
-          },
-          {
-            "displayName": "Nationality",
-            "entityType": "@sys.location",
-            "required": true
-          }
-        ],
-        "webhookState": {
-          "webhook": "https://webhook.site/dfef2512-28ed-40e4-b662-891cc64262da",
-          "headers": {
-            "Content-Type": "application/json"
-          }
-        }
-      }
+    "name": "cd63e961-27a1-4d89-b74b-6b2e150511e5"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
     },
-    {
-      "name": "contact-information",
-      "entryFulfillment": {
-        "messages": [
-          {
-            "text": {
-              "text": [
-                "Thank you for providing your personal information. We will now proceed with the credit assessment."
-              ]
-            }
-          }
-        ]
-      },
-      "transitions": [
-        {
-          "nextPage": "credit-score"
-        }
-      ]
-    },
-    {
-      "name": "credit-score",
-      "entryFulfillment": {
-        "messages": [
-          {
-            "text": {
-              "text": [
-                "Based on the information provided, your credit score is {{parameters.Credit Score}}"
-              ]
-            }
-          }
-        ]
-      },
-      "endFlow": true
-    }
-  ]
+    "name": "83d19448-b98f-4387-a201-da5b81822bc1"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_STANDARD",
+    "classificationThreshold": 0.30000001
+  }
 }
