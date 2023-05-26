@@ -55,17 +55,7 @@
                     "type":"postback",
                     "title":"🦠💉 Find COVID-19 Vaccine Access Points",
                     "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },     
-                  {
-                    "type":"postback",
-                    "title":"🧫🧑‍🔬 Find COVID-19 Testing locations",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },     
-                  {
-                    "type":"postback",
-                    "title":"📞 Contact HR representative",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  }        
+                  }      
                 ]      
               }
             ]
