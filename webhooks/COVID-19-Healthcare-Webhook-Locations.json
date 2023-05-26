@@ -2,7 +2,7 @@
   "name": "574746d2-e57f-40de-ab26-ed656ede887f",
   "displayName": "COVID-19-Healthcare-Webhook-Locations",
   "genericWebService": {
-    "uri": "https://locations-dot-covid19-healthcare-chatbot.wn.r.appspot.com/covid19-locations"
+    "uri": "https://webhook.site/dfef2512-28ed-40e4-b662-891cc64262da"
   },
   "timeout": {
     "seconds": 5
