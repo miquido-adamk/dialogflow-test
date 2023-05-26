@@ -20,7 +20,28 @@
             "text": "📞 Contact HR representative"
           } ],
           "type": "chips"
-        } ] ]
+        } ] ],
+        "facebook": {
+          "attachment": {
+            "type": "template",
+            "payload": {
+              "template_type": "button",
+              "text": "What kind of cake would you like?",
+              "buttons": [
+                {
+                  "type": "postback",
+                  "payload": "witheggs",
+                  "title": "Contain Eggs"
+                },
+                {
+                  "type": "postback",
+                  "payload": "noeggs",
+                  "title": "Eggless"
+                }
+              ]
+            }
+          }
+        }
       },
       "languageCode": "en"
     }, {
