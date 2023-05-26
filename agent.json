@@ -1,8 +1,10 @@
 {
+  "name": "credit-assessment",
+  "displayName": "Credit Assessment",
   "defaultLanguageCode": "en",
   "timeZone": "America/Los_Angeles",
   "projectNumber": 686287860296,
-  "startFlow": "Default Start Flow",
+  "startFlow": "credit-assessment",
   "advancedSettings": {
     "loggingSettings": {
     
