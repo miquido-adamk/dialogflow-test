@@ -25,27 +25,7 @@
       "languageCode": "en"
     }, {
       "text": {
-        "text": [ "How can I assist you today?" ],
-        "attachment": {
-          "type": "template",
-          "payload": {
-            "elements": [
-              {
-                "title": "More",
-                "buttons": [
-                  {
-                    "title": "more",
-                    "payload": "more",
-                    "type": "postback"
-                  }
-                ],
-                "subtitle": "",
-                "image_url": "https://i.imgur.com/sI1VUsV.jpg"
-              }
-            ],
-            "template_type": "generic"
-          }
-        }
+        "text": [ "How can I assist you today?" ]
       },
       "languageCode": "en"
     } ]
