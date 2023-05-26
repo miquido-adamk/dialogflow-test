@@ -6,7 +6,7 @@
   },
   "entryFulfillment": {
     "messages": [ {
-      "payload": {
+      "payload": [{
         "richContent": [ [ {
           "options": [ {
             "text": "✅ Get a Clearance Pass"
@@ -21,23 +21,11 @@
           } ],
           "type": "chips"
         } ] ]
-      },
+      }],
       "languageCode": "en"
     }, {
       "text": {
         "text": [ "How can I assist you today?" ],
-        "quick_replies": [
-          {
-            "content_type": "text",
-            "title": "✅ Get a Clearance Pass",
-            "payload": "✅ Get a Clearance Pass"
-          },
-          {
-            "content_type": "text",
-            "title": "😷🏡 COVID-19 Symptom Assessment",
-            "payload": "😷🏡 COVID-19 Symptom Assessment"
-          }
-        ]
       },
       "languageCode": "en"
     } ]
