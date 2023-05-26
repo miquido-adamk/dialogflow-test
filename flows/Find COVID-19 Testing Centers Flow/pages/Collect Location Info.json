@@ -1,0 +1,63 @@
+{
+  "name": "f9fe0340-2eec-4231-8c2d-5c8f284edf6c",
+  "displayName": "Collect Location Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "preferred_location",
+      "required": true,
+      "entityType": "@sys.location",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please enter your location (ex: 58 Middle Point Rd, San Francisco, CA 94124)" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please enter your location (ex: 2401 Keith Street, San Francisco)" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d1b2c6e0-63aa-4dd9-a8ef-789998078d40"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please enter your location. At the minimum, please provide the city or zip code (ex: San Francisco, 94124)" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "c8a9b0d1-64d8-4fab-b902-c1d4ac510c6f"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preferred_location_provided",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Call/Show Testing Locations",
+    "name": "63308d2e-c530-4b36-b109-4df7c6c618fa"
+  } ]
+}

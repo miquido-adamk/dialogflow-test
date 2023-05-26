@@ -1,0 +1,23 @@
+{
+  "name": "d8e7fa1e-18e3-4d2d-b301-6fc452657d27",
+  "displayName": "Show Disclaimers (if any)",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗Get vaccinated against COVID-19\n❗Sign up for an appointment or drop in to get a COVID-19 vaccine." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "62bf9db0-b705-479a-8b9f-ce816883bf4e"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "a169234a-cc46-43d3-8a56-e7d199c42002",
+  "displayName": "Check for close contact with someone having COVID-19",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "In the past 10 days, have you been in close contact 🧑‍🤝‍🧑 (within 6 feet of someone for a cumulative total of 15 minutes or more over a 24-hour period) with someone who has COVID-19?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "in_close_contact",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Decide for Clearance?",
+    "name": "0c995bdb-3b74-41d9-b38f-04921cb65f87"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "in_close_contact",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Decide for Clearance?",
+    "name": "5477d556-accb-42fa-9c98-4a8382d62365"
+  } ]
+}

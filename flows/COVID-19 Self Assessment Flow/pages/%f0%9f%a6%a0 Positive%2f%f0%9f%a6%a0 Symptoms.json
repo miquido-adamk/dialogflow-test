@@ -1,0 +1,50 @@
+{
+  "name": "12633801-1540-481e-958a-161389a1c8cd",
+  "displayName": "🦠 Positive/🦠 Symptoms",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗You must stay home😷🏡  until:\n\n1. 10 days have passed since your symptoms started and\n\n2. You haven't had a fever in the last 24 hours, without taking medicine for fever, and\n\n3. Your symptoms are getting better." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.sfdph.org/dph/alerts/covid-guidance/what-to-do-quarantine.pdf",
+            "text": "What to do when you must stay home to prevent the spread of COVID-19",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "97880651-89a1-4b65-9ddf-0f0605f4f863"
+  } ]
+}

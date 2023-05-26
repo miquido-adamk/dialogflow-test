@@ -1,0 +1,54 @@
+{
+  "name": "ad664f3f-bb29-4698-998a-4de8f0c64703",
+  "displayName": "Try Again?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Unable to find any COVID-19 Testing centers nearby: $session.params.preferred_location.original\n\n❗This tool supports COVID-19 Testing centers in the San Francisco region only.\n\nWould you like to try again?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "4756b8bb-964e-48f2-877f-87d29769c18b"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preferred_location",
+        "value": null
+      }, {
+        "parameter": "preferred_location_latitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_longitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_provided",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Collect Location Info",
+    "name": "3478436a-9cc6-4478-8295-9c9e0161846d"
+  } ]
+}

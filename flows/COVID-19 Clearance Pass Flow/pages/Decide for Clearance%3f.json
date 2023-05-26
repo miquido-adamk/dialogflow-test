@@ -1,0 +1,46 @@
+{
+  "name": "0956b3ce-8dec-4cc0-99b8-37504f73919f",
+  "displayName": "Decide for Clearance?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.is_fully_vaccinated = \"true\" AND $session.params.in_close_contact = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🚫 Symptoms/CC/Vaccinated ",
+    "name": "10b51e97-6c12-42d8-a06b-439eb63893db"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.is_fully_vaccinated = \"false\" AND $session.params.in_close_contact = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🚫 Symptoms/CC/❌Vaccinated",
+    "name": "dd054bf0-7b23-4db7-a2c6-e5160ea61de2"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.in_close_contact = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🚫 Symptoms/❌CC",
+    "name": "17c363e1-a958-4aae-88b6-6c531a9388b1"
+  }, {
+    "condition": "$session.params.is_fully_vaccinated = \"false\" AND $session.params.in_close_contact = \"true\" AND $session.params.has_covid19_symptoms = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🚫 CC/❌Symptoms/❌Vaccinated",
+    "name": "7bee1c3d-946f-4461-9fe3-b1e63aebc07a"
+  }, {
+    "condition": "($session.params.is_fully_vaccinated = \"true\" AND $session.params.in_close_contact = \"true\" AND $session.params.has_covid19_symptoms = \"false\") OR ($session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"false\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Generate a new Clearance Pass",
+    "name": "e54e7422-a7e5-4430-9153-188e94763535"
+  } ]
+}

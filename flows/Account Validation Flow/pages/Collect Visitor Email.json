@@ -1,0 +1,75 @@
+{
+  "name": "16d72922-fd64-40f4-83be-ac384a0eaf8d",
+  "displayName": "Collect Visitor Email",
+  "form": {
+    "parameters": [ {
+      "displayName": "visitor_email",
+      "required": true,
+      "entityType": "@sys.email",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please provide your company's email address. " ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry. Please provide your company's email address. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "078c1acf-3bf7-4cf4-9b49-4408ce46f9a3"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry. Please enter your company's email address. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "bd9b6ffc-62a7-4a4e-aba6-08862b571806"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "f4779074-6fd8-4670-a839-95324b3223b7"
+  }, {
+    "intent": "smalltalk.find_using_my_employee_id",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Visitor Emp ID",
+    "name": "3a540271-4f67-49c8-ade0-d71ded188cba"
+  }, {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "webhook": "COVID-19-Healthcare-Webhook-ClearancePass",
+      "tag": "validate-account-using-email"
+    },
+    "targetPage": "Validate Visitor Email",
+    "name": "11552690-adc8-4f60-b33c-d65128b15d97"
+  } ]
+}

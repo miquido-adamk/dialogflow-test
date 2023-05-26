@@ -1,0 +1,43 @@
+{
+  "name": "fc250a5d-ef60-4e6a-a8dc-aa34f71006d1",
+  "displayName": "❌CC/❌Symptoms/❌Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "✅  You do not need to get tested unless recommended or required by your healthcare provider, employer, or public health official.\n" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/index.html",
+            "text": "Learn about COVID-19 Vaccines",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "c7da5203-a350-44ee-b3b6-8fcd534f93cf"
+  } ]
+}

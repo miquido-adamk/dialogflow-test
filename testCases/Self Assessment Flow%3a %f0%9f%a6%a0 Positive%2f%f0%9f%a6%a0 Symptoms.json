@@ -1,0 +1,403 @@
+{
+  "name": "fbf6310c-6193-437b-b7d0-7d7429f0288f",
+  "tags": [ "#self-symptoms+ve-vaccinated" ],
+  "displayName": "Self Assessment Flow: 🦠 Positive/🦠 Symptoms",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the COVID-19 Healthcare virtual agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "How long to stay home?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "head.covid19_self_assessment"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome to our COVID-19 self-assessment tool. \n\n❗If you are experiencing a life-threatening emergency, such as severe shortness of breath or high fever, call 911.\n\n❗This tool is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a medical professional for serious symptoms or emergencies.\n\n❗All information provided is safe and anonymous." ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "start"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "",
+        "in_close_contact": "",
+        "is_fully_vaccinated": "",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_selfassessment"
+      },
+      "currentPage": {
+        "name": "Check for Emergency Symptoms? ",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Are you experiencing any of the of these warning signs:" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "",
+        "in_close_contact": "",
+        "is_fully_vaccinated": "",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_no"
+      },
+      "currentPage": {
+        "name": "Check for immediate Medical care needs?",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Are your symptoms getting worse, especially you have trouble breathing. For example, worrisome signs can include:" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "",
+        "in_close_contact": "",
+        "is_fully_vaccinated": "",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_no"
+      },
+      "currentPage": {
+        "name": "Are you fully vaccinated?",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Have You Been Fully Vaccinated? \n\nIn general, people are considered fully vaccinated:" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "",
+        "in_close_contact": "",
+        "is_fully_vaccinated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_yes"
+      },
+      "currentPage": {
+        "name": "Any symptoms?",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "People with COVID-19 have had a wide range of symptoms reported – ranging from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Anyone can have mild to severe symptoms. People with these symptoms may have COVID-19. \n\nAre you experiencing any of the following symptoms? " ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "true",
+        "in_close_contact": "",
+        "is_fully_vaccinated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_yes"
+      },
+      "currentPage": {
+        "name": "In Close Contact (COVID-19)?",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Did you have Close Contact with someone who had COVID-19? " ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "true",
+        "in_close_contact": "false",
+        "is_fully_vaccinated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_no"
+      },
+      "currentPage": {
+        "name": "Have you been tested for COVID-19?",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "In the last 10 days, have you been tested for the coronavirus that causes COVID-19?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "",
+        "covid_testing": "true",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "true",
+        "in_close_contact": "false",
+        "is_fully_vaccinated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_yes"
+      },
+      "currentPage": {
+        "name": "Get Covid Result",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Your COVID-19 result came negative or positive?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "positive"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "covid_result": "positive",
+        "covid_testing": "true",
+        "emergency_symptoms_worse": "false",
+        "emergency_warning_signs": "false",
+        "has_covid19_symptoms": "true",
+        "in_close_contact": "false",
+        "is_fully_vaccinated": "true",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.covid19_positive"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "❗You must stay home😷🏡  until:\n\n1. 10 days have passed since your symptoms started and\n\n2. You haven't had a fever in the last 24 hours, without taking medicine for fever, and\n\n3. Your symptoms are getting better." ]
+      }, {
+        "text": [ "May I help you with anything else today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1630452683,
+    "nanos": 394350000
+  },
+  "testConfig": {
+    "trackingParameters": [ "covid_testing", "covid_result", "emergency_symptoms_worse", "emergency_warning_signs", "has_covid19_symptoms", "in_close_contact", "is_fully_vaccinated" ]
+  }
+}

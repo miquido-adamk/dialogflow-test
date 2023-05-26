@@ -1,0 +1,66 @@
+{
+  "name": "69d1e238-6f0b-42d0-8bdd-7d2eccf21989",
+  "displayName": "Call/Show Vaccine Access Points",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "one moment while i look that up." ]
+      },
+      "languageCode": "en"
+    } ],
+    "webhook": "COVID-19-Healthcare-Webhook-Locations",
+    "tag": "find-vaccine-access-points",
+    "setParameterActions": [ {
+      "parameter": "retry_count",
+      "value": "$sys.func.ADD($session.params.retry_count,1)"
+    } ],
+    "returnPartialResponses": true
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.service_api_error = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Webhook Service Error",
+    "name": "b457405d-6992-4b1e-94fa-e0ad4b39b8f4"
+  }, {
+    "condition": "$session.params.vaccine_access_points_found = \"false\" AND $session.params.retry_count \u003c= 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Try Again?",
+    "name": "72287725-67e8-4b58-ba29-b22e61edcd14"
+  }, {
+    "condition": "$session.params.vaccine_access_points_found = \"false\" AND $session.params.retry_count \u003e 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "332a097c-49b6-4b17-8396-91b82de93e11"
+  }, {
+    "condition": "$session.params.vaccine_access_points_found = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Disclaimers (if any)",
+    "name": "c56c9e7d-b81d-4fb1-b339-37e91b228055"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Show Webhook Service Error",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "47345af6-bf69-4ebc-b20e-375140ffb3fc"
+  }, {
+    "targetPage": "Show Webhook Service Error",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "f7005793-6361-41e5-bff5-c0dcdb90e61e"
+  } ]
+}

@@ -1,0 +1,220 @@
+{
+  "name": "201d1df3-debf-4836-8246-8b96d8deb346",
+  "tags": [ "#find-vaccine-points-webhook", "#drop-ins", "#wheelchair" ],
+  "displayName": "Lookup Vaccine Locations with Webhook",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the COVID-19 Healthcare virtual agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "find nearby vaccine access points"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "true",
+        "operation_name": "find-vaccine-access-points",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false",
+        "retry_count": 0,
+        "service_api_error": "false",
+        "vaccine_access_points_found": "false"
+      },
+      "triggeredIntent": {
+        "name": "head.find_vaccine_locations"
+      },
+      "currentPage": {
+        "name": "Collect Location Info",
+        "flow": "Find COVID-19 Vaccine Access Points Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help find a location near you, then call or visit their website to make an appointment.\n\n❗You can get vaccinated with one of 3 brands: Pfizer, Moderna, and Johnson \u0026 Johnson (Janssen). Check availability when booking.\n\n❗If you are under 18, Pfizer is the only vaccine type approved for you.\n\n❗If you get either the Pfizer or the Moderna vaccine, you must get 2 doses to be fully vaccinated. If you get the Johnson \u0026 Johnson (Janssen) vaccine, you only need a single dose. \n\n❗All vaccine types are tested, safe, and highly effective.\n\n❗Supplemental doses - If you got the Johnson and Johnson vaccine, you are fully vaccinated. SFDPH does not recommend a supplemental dose." ]
+      }, {
+        "text": [ "Please enter your location (ex: 2401 Keith Street, San Francisco 94124)" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/415c0348-4e23-4a09-b2de-02419cd939f0",
+        "displayName": "Find COVID-19 Vaccine Access Points Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2401 Keith Street, San Francisco, CA"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "true",
+        "operation_name": "find-vaccine-access-points",
+        "pass_renewal_min_hours": 4,
+        "preferred_location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "2401 Keith Street, San Francisco, CA",
+          "street-address": "2401 Keith Street"
+        },
+        "preferred_location_provided": "true",
+        "retry_count": 0,
+        "service_api_error": "false",
+        "vaccine_access_points_found": "false"
+      },
+      "currentPage": {
+        "name": "Ask for Drop-in Info",
+        "flow": "Find COVID-19 Vaccine Access Points Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Are you looking for a drop-in appointment only?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/415c0348-4e23-4a09-b2de-02419cd939f0",
+        "displayName": "Find COVID-19 Vaccine Access Points Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "drop_in_only": "true",
+        "operation_in_progress": "true",
+        "operation_name": "find-vaccine-access-points",
+        "pass_renewal_min_hours": 4,
+        "preferred_location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "2401 Keith Street, San Francisco, CA",
+          "street-address": "2401 Keith Street"
+        },
+        "preferred_location_provided": "true",
+        "retry_count": 0,
+        "service_api_error": "false",
+        "vaccine_access_points_found": "false"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_yes"
+      },
+      "currentPage": {
+        "name": "Ask for Wheelchair access?",
+        "flow": "Find COVID-19 Vaccine Access Points Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Do you need wheelchair accessible location?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/415c0348-4e23-4a09-b2de-02419cd939f0",
+        "displayName": "Find COVID-19 Vaccine Access Points Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "drop_in_only": "true",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "2401 Keith Street, San Francisco, CA",
+          "street-address": "2401 Keith Street"
+        },
+        "preferred_location_latitude": 37.726073999999997,
+        "preferred_location_longitude": -122.392241,
+        "preferred_location_provided": "true",
+        "retry_count": 1,
+        "service_api_error": "false",
+        "vaccine_access_points_found": "true",
+        "wheelchair_accessible_only": "true"
+      },
+      "triggeredIntent": {
+        "name": "smalltalk.confirmation_yes"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "one moment while i look that up." ]
+      }, {
+        "text": [ "3 vaccine access point(s) within 20 miles of: 2401 Keith Street, San Francisco, CA" ]
+      }, {
+        "text": [ "❗Get vaccinated against COVID-19\n❗Sign up for an appointment or drop in to get a COVID-19 vaccine." ]
+      }, {
+        "text": [ "May I help you with anything else today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1630452450,
+    "nanos": 874388000
+  },
+  "testConfig": {
+    "trackingParameters": [ "drop_in_only", "preferred_location", "preferred_location_provided", "wheelchair_accessible_only", "vaccine_access_points_found" ]
+  }
+}

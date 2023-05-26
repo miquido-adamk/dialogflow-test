@@ -1,0 +1,28 @@
+{
+  "name": "3aac1071-a6fc-47d9-ba6b-73f99e6255c6",
+  "displayName": "Contact Us",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please contact us over the phone at $session.params.company_phone for further assistance." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Good bye!\n\n[Chat ended - You will need to refresh the page to start a new session]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "35cafcee-ff6d-4cde-bada-aac3fc189e09"
+  } ]
+}

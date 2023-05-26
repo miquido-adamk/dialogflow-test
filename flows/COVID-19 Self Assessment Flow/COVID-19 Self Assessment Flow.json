@@ -1,0 +1,91 @@
+{
+  "name": "935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+  "displayName": "COVID-19 Self Assessment Flow",
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "in_close_contact",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Check for Emergency Symptoms? ",
+    "name": "afb978cc-f965-478e-8555-aa3b2c25ff91"
+  }, {
+    "intent": "smalltalk.confirmation_selfassessment",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_fully_vaccinated",
+        "value": ""
+      }, {
+        "parameter": "has_covid19_symptoms",
+        "value": ""
+      }, {
+        "parameter": "in_close_contact",
+        "value": ""
+      }, {
+        "parameter": "covid_testing",
+        "value": ""
+      }, {
+        "parameter": "covid_result",
+        "value": ""
+      }, {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      }, {
+        "parameter": "operation_name",
+        "value": "self-assessment"
+      } ]
+    },
+    "targetPage": "Check for Emergency Symptoms? ",
+    "name": "8884011e-ff44-44c1-9b92-780c6c41e28c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "Start COVID-19 self-assessment"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2e46ddca-054a-4b58-96af-bdd9d6848d31"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "86cb1826-7bc7-4db2-b471-d2084dda733a"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "095e9e3c-a9a0-4329-9c64-33b2e0073cce"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_STANDARD",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "transitionRouteGroups": [ "covi19-faqs" ]
+}

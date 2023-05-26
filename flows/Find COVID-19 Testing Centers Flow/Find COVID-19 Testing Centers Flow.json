@@ -1,17 +1,22 @@
 {
-  "name": "credit-assessment",
-  "displayName": "Credit Assessment",
+  "name": "0456191e-0f62-4daf-8809-3afd73d000f9",
+  "displayName": "Find COVID-19 Testing Centers Flow",
   "transitionRoutes": [ {
-    "intent": "Default Welcome Intent",
+    "condition": "true",
     "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
-        },
-        "languageCode": "en"
+      "setParameterActions": [ {
+        "parameter": "retry_count",
+        "value": 0
+      }, {
+        "parameter": "service_api_error",
+        "value": "false"
+      }, {
+        "parameter": "testing_centers_found",
+        "value": "false"
       } ]
     },
-    "name": "8b09e828-b57f-4685-881f-e0c183f2f035"
+    "targetPage": "Ask to use previous location",
+    "name": "8e85c73b-9415-4a3e-91ef-812c494591f6"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
@@ -23,7 +28,7 @@
         "languageCode": "en"
       } ]
     },
-    "name": "cd63e961-27a1-4d89-b74b-6b2e150511e5"
+    "name": "4dff7cc9-bb82-4a20-9646-be605c3c16c6"
   }, {
     "event": "sys.no-input-default",
     "triggerFulfillment": {
@@ -34,10 +39,14 @@
         "languageCode": "en"
       } ]
     },
-    "name": "83d19448-b98f-4387-a201-da5b81822bc1"
+    "name": "a21f2e15-c1a5-4f2d-bfc2-64cb61cdb9a3"
   } ],
   "nluSettings": {
     "modelType": "MODEL_TYPE_STANDARD",
-    "classificationThreshold": 0.30000001
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
   }
 }

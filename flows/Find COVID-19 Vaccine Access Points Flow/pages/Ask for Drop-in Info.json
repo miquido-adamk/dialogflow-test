@@ -1,0 +1,48 @@
+{
+  "name": "1bcb3666-ddb5-4bb7-aad9-4360b191676f",
+  "displayName": "Ask for Drop-in Info",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are you looking for a drop-in appointment only?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "drop_in_only",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Ask for Wheelchair access?",
+    "name": "07eab4d5-7f7c-436a-b994-7c58c5d54bba"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "drop_in_only",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Ask for Wheelchair access?",
+    "name": "91dcc49f-0dd6-4fd5-8d0c-1f18ce707de7"
+  } ]
+}

@@ -1,0 +1,56 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "COVID-",
+      "auto": true
+    }, {
+      "text": "19",
+      "auto": true
+    }, {
+      "text": " Symptom Assessment",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Should I get tested?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do a self assessment",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to take covid",
+      "auto": true
+    }, {
+      "text": "19",
+      "auto": true
+    }, {
+      "text": " assessment",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can i leave my house now?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How long should I stay home?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

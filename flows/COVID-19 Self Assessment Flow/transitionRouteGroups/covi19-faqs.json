@@ -1,0 +1,96 @@
+{
+  "name": "2760224f-4910-4df0-bf52-d90668890bf1",
+  "displayName": "covi19-faqs",
+  "transitionRoutes": [ {
+    "intent": "faq.covid19-what_are_symptoms_of_covid19",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html",
+            "text": "Full list of Symptoms of COVID-19",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "014119a6-5b89-48b4-9b37-ccf1f9cb906c"
+  }, {
+    "intent": "faq.covid19-have_symptoms_for_covid19",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please follow these steps to help prevent the spread of COVID-19 if you are sick." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html",
+            "text": "What to Do If You Are Sick - List of Steps",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "9f9b8318-bb74-4e88-b1bf-61f9b33a4961"
+  }, {
+    "intent": "faq.covidq9-close_contact_with_someone_who_had_covid19",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You should quarantine when you might have been exposed to the virus or isolate when you have been infected with the virus, even if you don’t have symptoms. \n\nPlease check the CDC guidelines here. " ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/quarantine.html",
+            "text": "Quarantine or Isolation",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "42d9ea04-44b5-42a9-8772-7e38f2d5dd3f"
+  } ]
+}

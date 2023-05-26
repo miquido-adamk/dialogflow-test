@@ -1,0 +1,45 @@
+{
+  "name": "b1f24491-fc93-4a01-adb9-05a8b2970b18",
+  "displayName": "Start Health Screening",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "This Health Screening is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition. Health screening results will be reviewed for the sole purpose of gaining access to our offices and confidentiality will be maintained.\n\n❗You should complete the health screening process every day that you plan to be working in any of the company's buildings not more than 4 hours in advance." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "is_fully_vaccinated",
+      "value": null
+    }, {
+      "parameter": "in_close_contact",
+      "value": null
+    }, {
+      "parameter": "has_covid19_symptoms",
+      "value": null
+    }, {
+      "parameter": "supv_approval_required",
+      "value": null
+    }, {
+      "parameter": "expiry_datetime",
+      "value": null
+    }, {
+      "parameter": "expiring_in_hours",
+      "value": null
+    }, {
+      "parameter": "previous_pass_valid",
+      "value": "false"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "Check for Symptoms",
+    "name": "8819e21f-27d6-4271-b547-10e089e3df6a"
+  } ]
+}

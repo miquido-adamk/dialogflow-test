@@ -1,0 +1,36 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "what precautions i should take if having covid",
+      "auto": true
+    }, {
+      "text": "19",
+      "auto": true
+    }, {
+      "text": " symptoms?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I have symptoms for covid-",
+      "auto": true
+    }, {
+      "text": "19",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have symptoms for COVID-",
+      "auto": true
+    }, {
+      "text": "19",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

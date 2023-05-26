@@ -1,0 +1,91 @@
+{
+  "name": "9d565b46-6a3e-4d26-b22a-9b3e5414cc72",
+  "displayName": "Validate Visitor Email",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "retry_count",
+      "value": "$sys.func.ADD($session.params.retry_count,1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_yes",
+    "condition": "$session.params.retry_count \u003c= 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "visitor_email",
+        "value": null
+      } ]
+    },
+    "targetPage": "Collect Visitor Email",
+    "name": "ce669a92-7f18-435e-a61d-828b50d3b521"
+  }, {
+    "intent": "smalltalk.find_using_my_employee_id",
+    "condition": "$session.params.retry_count \u003c= 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "visitor_email",
+        "value": null
+      } ]
+    },
+    "targetPage": "Collect Visitor Emp ID",
+    "name": "73ee7806-08c5-4dea-8948-0275941daef9"
+  }, {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "2c826505-e467-41bd-9298-f24b867cd905"
+  }, {
+    "condition": "$session.params.account_verified = \"false\" AND $session.params.retry_count \u003c= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I could not find that email in our system. Please make sure you are entering your company's email id and not a personal one.\n\nWould you like to try again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "✔️ Yes"
+            }, {
+              "text": "❌ No"
+            }, {
+              "text": "Try with my Employee Id"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "visitor_email",
+        "value": null
+      } ]
+    },
+    "name": "18ce21fa-174e-4c9b-a103-c48ae8574230"
+  }, {
+    "condition": "$session.params.account_verified = \"false\" AND $session.params.retry_count \u003e 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I could not find that email in our system." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "4a3a8072-2969-4780-a889-75dc4f609e46"
+  }, {
+    "condition": "$session.params.account_verified = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "00893a14-ea6c-4475-a5f3-34f6f61bd4b4"
+  } ]
+}

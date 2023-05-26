@@ -1,0 +1,61 @@
+{
+  "name": "4df3461c-3a87-402e-95a8-252e72fe14d1",
+  "displayName": "Get last Clearance Pass Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "previous_pass_valid",
+      "value": "false"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "one moment while i look that up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "COVID-19-Healthcare-Webhook-ClearancePass",
+      "tag": "load-recent-pass",
+      "returnPartialResponses": true
+    },
+    "name": "249f1e98-c269-4737-81a5-b42a860b7cbe"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"true\" AND $session.params.expiring_in_hours \u003c= $session.params.pass_renewal_min_hours",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The Clearance Pass is expiring in $session.params.expiring_in_hours hour(s)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Renew your Clearance Pass?",
+    "name": "fed28586-797f-4d29-a14d-62a8db434e24"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Health Screening",
+    "name": "5e4b6cc2-db5e-43fb-9962-558ef1b8e7a2"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"true\" AND $session.params.expiring_in_hours \u003e $session.params.pass_renewal_min_hours AND $session.params.supv_approval_required = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "☑️ Clearance Pass with conditions",
+    "name": "bfcc2855-6583-49e5-9dae-2517a7fdebac"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"true\" AND $session.params.expiring_in_hours \u003e $session.params.pass_renewal_min_hours AND $session.params.supv_approval_required = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "✅ Clearance Pass",
+    "name": "34bc397e-53e7-4e90-afa2-259f2c56f102"
+  } ]
+}

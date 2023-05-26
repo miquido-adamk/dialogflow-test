@@ -1,0 +1,50 @@
+{
+  "name": "3ae48b2f-3541-4797-832a-a99b1e63c706",
+  "displayName": "❌CC/🦠Symptoms",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗You must stay home😷🏡  until one of the following happens:\n\n1. You have a negative COVID-19 test result, collected after your symptoms started.\nYou should still stay home while sick as much as you can, to prevent spread of other illnesses.\n\n2. You get a doctor's note or clinic note that you do not need to isolate.\n\n3. If you don't get tested or cleared by a healthcare provider, you must stay home until all of the following are true:\n⚈ 10 days have passed since your symptoms started and\n⚈ You haven't had a fever in the last 24 hours, without taking medicine for fever, and\n⚈ Your symptoms are getting better." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.sfdph.org/dph/alerts/covid-guidance/what-to-do-quarantine.pdf",
+            "text": "What to do when you must stay home to prevent the spread of COVID-19",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "26a1f1c1-a933-45a8-b938-fc3eaa91ba8f"
+  } ]
+}

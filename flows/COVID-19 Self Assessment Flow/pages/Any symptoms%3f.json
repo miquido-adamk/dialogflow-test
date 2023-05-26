@@ -1,0 +1,89 @@
+{
+  "name": "20dfa928-7cf8-4ef9-8af1-2f98082823b7",
+  "displayName": "Any symptoms?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "People with COVID-19 have had a wide range of symptoms reported – ranging from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Anyone can have mild to severe symptoms. People with these symptoms may have COVID-19. \n\nAre you experiencing any of the following symptoms? " ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "title": "Fever or chills",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Cough",
+          "type": "list"
+        }, {
+          "title": "Shortness of breath or difficulty breathing",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Fatigue",
+          "type": "list"
+        }, {
+          "title": "Muscle or body aches",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Headache",
+          "type": "list"
+        }, {
+          "title": "New loss of taste or smell",
+          "type": "list"
+        }, {
+          "title": "Sore throat",
+          "type": "list"
+        }, {
+          "title": "Congestion or runny nose",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Nausea or vomiting",
+          "type": "list"
+        }, {
+          "title": "Diarrhea",
+          "type": "list"
+        }, {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "has_covid19_symptoms",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "In Close Contact (COVID-19)?",
+    "name": "aac773af-9f1c-4af7-9094-9e4d739d625e"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "has_covid19_symptoms",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "In Close Contact (COVID-19)?",
+    "name": "0ed1ede2-8a95-4a7a-85da-904fbc61e39c"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "6c2fcd32-8979-496a-945b-baa250115f0e",
+  "displayName": "Get Covid Result",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your COVID-19 result came negative or positive?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "My COVID-19 test result was NEGATIVE."
+          }, {
+            "text": "My COVID-19 test result was POSITIVE."
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.covid19_negative",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_result",
+        "value": "negative"
+      } ]
+    },
+    "targetPage": "Determine Recommendations",
+    "name": "c478891a-819f-4494-b72b-467244faa16b"
+  }, {
+    "intent": "smalltalk.covid19_positive",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_result",
+        "value": "positive"
+      } ]
+    },
+    "targetPage": "Determine Recommendations",
+    "name": "995ad393-d2b2-4aea-9649-9c43fd2bee86"
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "330d4276-55b5-49bd-b1e2-014c3c6025b1",
+  "displayName": "✅ Clearance Pass",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.previous_pass_valid = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "✅ Your Clearance pass is still valid for another $session.params.expiring_in_hours hours. It will expire on $session.params.expiry_datetime." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "😷 Mask Mandate Policy",
+    "name": "de80ff13-066a-439e-a6e1-fc05d8b0d16d"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"false\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "✅ Your Clearance pass has been issued and is valid until   $session.params.expiry_datetime." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "previous-pass-valid",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "😷 Mask Mandate Policy",
+    "name": "380b6d84-7892-4431-b935-96b6aaa18fa6"
+  } ]
+}

@@ -1,0 +1,85 @@
+{
+  "name": "cc3cbd02-590d-4a6b-8a64-9faacfd1d287",
+  "tags": [ "#speak-with-hr-rep" ],
+  "displayName": "Contact HR Rep",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the COVID-19 Healthcare virtual agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to speak to HR person"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "company_phone": "800-000-001",
+        "contact_hr_rep": "true",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "head.contact_hr_representative"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Contact HR Rep Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please contact us over the phone at 800-000-001 for further assistance." ]
+      }, {
+        "text": [ "Good bye!\n\n[Chat ended - You will need to refresh the page to start a new session]" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/273e1db1-89a1-4810-9b2f-4c4d9fc28311",
+        "displayName": "Contact HR Rep Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1629769619,
+    "nanos": 470701000
+  },
+  "testConfig": {
+    "trackingParameters": [ "contact_hr_rep" ]
+  }
+}

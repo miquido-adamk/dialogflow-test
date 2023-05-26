@@ -1,0 +1,62 @@
+{
+  "name": "d9828a75-39d2-47d0-9bbb-51be32438775",
+  "displayName": "COVID-19 Clearance Pass Flow",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      }, {
+        "parameter": "operation_name",
+        "value": "clearance-pass"
+      } ]
+    },
+    "name": "ac4192af-92a0-414e-9086-b55a9b612904"
+  }, {
+    "condition": "$session.params.account_verified != \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Account Validation Flow",
+    "name": "636cbf7b-3a07-4d4a-9c66-b614247c72b6"
+  }, {
+    "condition": "$session.params.account_verified = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get last Clearance Pass Details",
+    "name": "3a9af0c2-6765-486f-a771-4a6531ce967d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6ccce3b5-1da3-43e5-84ab-439ee914a40b"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "05395594-26ac-4e44-af0e-de4914e775ce"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_STANDARD",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

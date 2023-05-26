@@ -1,0 +1,43 @@
+{
+  "name": "fdd2ff24-3093-4377-96ad-0563f7e9e6a0",
+  "displayName": "Anything Else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "operation_in_progress",
+      "value": "false"
+    }, {
+      "parameter": "operation_name",
+      "value": ""
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "May I help you with anything else today?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "✔️ Yes"
+            }, {
+              "text": "❌ No"
+            }, {
+              "text": "Show Main Menu"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4ef565ca-d3ac-426e-9734-14673a1f3c92"
+  } ]
+}

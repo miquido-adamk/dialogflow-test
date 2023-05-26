@@ -1,0 +1,68 @@
+{
+  "name": "f8ab8ea1-cd51-4888-9d03-9659975cb9c3",
+  "displayName": "Have you been tested for COVID-19?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "In the last 10 days, have you been tested for the coronavirus that causes COVID-19?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_testing",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Determine Recommendations",
+    "name": "766b0aff-3f9c-49f3-a2ad-6ae9cb9bb99e"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_testing",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Get Covid Result",
+    "name": "3b37bfd0-e7b6-47ad-a3e5-e7eafc7eefea"
+  }, {
+    "intent": "smalltalk.covid19_not_tested",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_testing",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Determine Recommendations",
+    "name": "b92e60dd-cd65-483b-9989-a909cd61f2fc"
+  }, {
+    "intent": "smalltalk.covid19_tested",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "covid_testing",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Get Covid Result",
+    "name": "57f053bc-984e-438a-aed5-6f99b5f30525"
+  } ]
+}

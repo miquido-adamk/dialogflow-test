@@ -1,0 +1,27 @@
+{
+  "name": "12181e3f-a681-48a6-aebe-a6a84d1cd4fc",
+  "displayName": "Emergency Symptoms Guidance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗🏥 Seek immediate medical care.\n\n❗Call ahead to the clinic or emergency room if you can. Tell them that you have COVID-19. \n\n❗ If you call 911 🚑 , tell the operator that you have COVID-19. This helps health care staff prepare for your arrival.\n\n🚫 🚌  Avoid using public transportation, taxis, or rideshares (Lyft, Uber) if you can, so you don’t expose other people. If you must use public transit, see www.sfcdcp.org/safertransit" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "emergency",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "27e83829-01b8-4214-a32f-12ed33ae1a9d"
+  } ]
+}

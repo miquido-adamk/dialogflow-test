@@ -1,0 +1,51 @@
+{
+  "name": "a790456b-3dfd-44db-befb-28863021540b",
+  "displayName": "Try Again?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Unable to find any COVID-19 Vaccine Access Points nearby: $session.params.preferred_location.original\n\n❗This tool supports COVID-19 Vaccine access points in the San Francisco region only.\n\nWould you like to try again?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "c71f6046-5b5f-42f4-a9e7-82e8b1d1b8a1"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preferred_location",
+        "value": null
+      }, {
+        "parameter": "preferred_location_latitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_longitude",
+        "value": null
+      } ]
+    },
+    "targetPage": "Collect Location Info",
+    "name": "dc402406-1de1-4533-9599-c009877bdf7c"
+  } ]
+}

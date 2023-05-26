@@ -1,0 +1,23 @@
+{
+  "name": "0408c6b4-d6fe-463a-b9a9-6dbba391d05a",
+  "displayName": "Info: Scan your badge on any Electronic Badge Reader",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "If cleared by the screening process, you'll receive a digital Clearance Pass via email. You can scan your pass at any Digital scanner to mark your presence in the building. You are still required to scan your employee badge when entering the office.\n\nIf your employee badge does not work for any reason, please show your employee badge and clearance pass when requested." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "b45ee53b-05c8-49c2-abec-8c8dd9afd6d6"
+  } ]
+}

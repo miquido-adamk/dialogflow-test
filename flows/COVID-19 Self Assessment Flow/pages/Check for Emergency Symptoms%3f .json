@@ -1,0 +1,73 @@
+{
+  "name": "73d56bcb-c4b1-4afb-950d-b5e9a01ec4a6",
+  "displayName": "Check for Emergency Symptoms? ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are you experiencing any of the of these warning signs:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "title": "Trouble breathing",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Chest pain or pressure that is not going away",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Being more confused than usual",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Trouble waking up or staying awake",
+          "type": "list"
+        }, {
+          "title": "Blue-ish lips or face",
+          "type": "list"
+        }, {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "emergency_warning_signs",
+      "value": "false"
+    }, {
+      "parameter": "emergency_symptoms_worse",
+      "value": "false"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check for immediate Medical care needs?",
+    "name": "5fa6296c-97e0-40f6-b7cf-9931922f8780"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "emergency_warning_signs",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Emergency Symptoms Guidance",
+    "name": "bd7ede04-76cf-49d6-9b6f-5ff3c89d06de"
+  } ]
+}

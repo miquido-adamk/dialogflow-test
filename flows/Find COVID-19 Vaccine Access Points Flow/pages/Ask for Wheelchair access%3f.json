@@ -1,0 +1,48 @@
+{
+  "name": "19bcea83-82ff-4770-8077-dbcc9190ab16",
+  "displayName": "Ask for Wheelchair access?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Do you need wheelchair accessible location?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wheelchair_accessible_only",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Call/Show Vaccine Access Points",
+    "name": "79134def-e3c8-4f3b-abdd-19aead46bc21"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wheelchair_accessible_only",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Call/Show Vaccine Access Points",
+    "name": "9f281981-9042-4ef7-8202-0b13e773bb01"
+  } ]
+}

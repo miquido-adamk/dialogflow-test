@@ -1,0 +1,84 @@
+{
+  "name": "7c10222f-5a26-4139-ad25-a6049e1fed08",
+  "displayName": "Check for Symptoms",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Have you experienced any of the following symptoms of COVID-19 in the past 10 days?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "title": "Fever (100.4°F/38.0°C or higher) 🤒, chills 🥶 or repeated shaking/shivering",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Cough",
+          "type": "list"
+        }, {
+          "title": "Shortness of breath or difficulty breathing",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Loss of taste or smell",
+          "type": "list"
+        }, {
+          "title": "Congested or runny nose 🤧",
+          "type": "list"
+        }, {
+          "title": "Sore throat",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Headache",
+          "type": "list"
+        }, {
+          "title": "Muscle aches or body aches 😞",
+          "type": "list"
+        }, {
+          "title": "Feeling unusually tired 😫 or fatigued",
+          "type": "list"
+        }, {
+          "title": "Diarrhea, nausea 🤢, or vomiting 🤮",
+          "type": "list"
+        }, {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "has_covid19_symptoms",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Have you gotten Lab confirmed +ve result?",
+    "name": "4c5f1a04-1b4b-4693-8e2c-1a8391014740"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "has_covid19_symptoms",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Have you gotten Lab confirmed +ve result?",
+    "name": "a9bdf630-0c5b-4812-a7f7-fd1ba218d59b"
+  } ]
+}

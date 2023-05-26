@@ -1,0 +1,239 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi there! 👋  I'm the COVID-19 Healthcare virtual agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pass_renewal_min_hours",
+        "value": 4
+      }, {
+        "parameter": "account_verified",
+        "value": "false"
+      }, {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      }, {
+        "parameter": "preferred_location",
+        "value": null
+      }, {
+        "parameter": "preferred_location_latitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_longitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_provided",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Show Main Menu",
+    "name": "25f25222-917f-4e78-ae69-a628529986a7"
+  }, {
+    "intent": "head.clearance_pass",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_mask_mandated",
+        "value": "true"
+      }, {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      }, {
+        "parameter": "operation_name",
+        "value": "clearance-pass"
+      } ]
+    },
+    "targetFlow": "COVID-19 Clearance Pass Flow",
+    "name": "7afd44ae-5cb7-4eb5-8ab0-4a03ed59f57f"
+  }, {
+    "intent": "head.covid19_self_assessment",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Welcome to our COVID-19 self-assessment tool. \n\n❗If you are experiencing a life-threatening emergency, such as severe shortness of breath or high fever, call 911.\n\n❗This tool is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a medical professional for serious symptoms or emergencies.\n\n❗All information provided is safe and anonymous." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_name",
+        "value": "self-assessment"
+      }, {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "COVID-19 Self Assessment Flow",
+    "name": "a39a0d28-c946-4f61-94ef-cb5ef5220023"
+  }, {
+    "intent": "head.find_covid19_testing_centers",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗If you are experiencing symptoms of COVID-19, such as fever, cough, or shortness of breath, please contact your healthcare provider or telehealth program to discuss whether you should be evaluated for testing.\n\n❗Each coronavirus test provider will determine if testing is appropriate based on your symptoms, risk factors, and test availability.\n\n❗Due to an increase in demand, there may be longer than usual wait times for testing and results in certain areas." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      }, {
+        "parameter": "operation_name",
+        "value": "find-testing-centers"
+      } ]
+    },
+    "targetFlow": "Find COVID-19 Testing Centers Flow",
+    "name": "9372f985-6308-4f4b-8c17-625a46bbbbbb"
+  }, {
+    "intent": "head.find_vaccine_locations",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can help find a location near you, then call or visit their website to make an appointment.\n\n❗You can get vaccinated with one of 3 brands: Pfizer, Moderna, and Johnson \u0026 Johnson (Janssen). Check availability when booking.\n\n❗If you are under 18, Pfizer is the only vaccine type approved for you.\n\n❗If you get either the Pfizer or the Moderna vaccine, you must get 2 doses to be fully vaccinated. If you get the Johnson \u0026 Johnson (Janssen) vaccine, you only need a single dose. \n\n❗All vaccine types are tested, safe, and highly effective.\n\n❗Supplemental doses - If you got the Johnson and Johnson vaccine, you are fully vaccinated. SFDPH does not recommend a supplemental dose." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "true"
+      }, {
+        "parameter": "operation_name",
+        "value": "find-vaccine-access-points"
+      } ]
+    },
+    "targetFlow": "Find COVID-19 Vaccine Access Points Flow",
+    "name": "db639444-b6b3-47fb-9d2e-476571bb9828"
+  }, {
+    "intent": "head.contact_hr_representative",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "757ff33a-9aab-4ae5-ba96-f9bf06448d22"
+  }, {
+    "intent": "smalltalk.show_main_menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Main Menu",
+    "name": "88504228-0b28-471a-9645-4b2f53a34aec"
+  }, {
+    "intent": "smalltalk.goodbye",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗Get vaccinated. Stay home if sick. Maximize fresh air. Stay vigilant, maintain social distance, and wear a mask. CDC guidance strongly recommends getting vaccinated." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-nCoV/index.html",
+            "text": "CDC Guidance and information on all topics related to COVID-19",
+            "type": "button"
+          }, {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://canotify.ca.gov/",
+            "text": "Sign up for COVID-19 Exposure Alerts",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Goodbye!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "04d1b288-156c-4663-83fb-3354fa051920"
+  }, {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Good bye!\n\n[Chat ended - Please refresh the page to start a new session]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "064c18a7-9cbb-4161-84fc-70f77e8f5959"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am here to help you find vaccine access points or coronavirus testing centers, do a COVID-19 Symptoms assessment and get a digital clearance pass. You can also say Show Main menu. \n\nHow may I help you today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fb8f29f0-ebfa-4a23-9309-a1e5536c0dfd"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ed0c96c7-cf6d-49b7-ae32-8b70bc239ffd"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Apologies, I was not able to understand that. I am here to help you with health screening assessment, clearance pass for entry into an office, finding nearby COVID-19 vaccine, and coronavirus testing locations. \n\nHow can I assist you today? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a7cb05e4-87ff-4de4-ab14-c1eba4d70b76"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Apologies, I am here to answer your questions about COVID-19 related healthcare - issue a clearance pass required for entry into the company's office(s), Symptoms assessment tool,  finding nearby COVID-19 vaccine, and coronavirus testing locations.\n\nHow can I assist you today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "abb3bc4a-5ec7-4707-9c67-f1a78b9dba90"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_STANDARD",
+    "classificationThreshold": 0.30000001
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "8db1dc0c-ddee-49ff-a56f-aa6975ddc6a2",
+  "displayName": "Show Disclaimers (if any)",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗Coronavirus test criteria and availability are changing daily. Please call the coronavirus testing site before you go to learn about testing criteria, availability, and hours." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else",
+    "name": "f017ab90-208e-49aa-ac33-03bb5a5bbc98"
+  } ]
+}

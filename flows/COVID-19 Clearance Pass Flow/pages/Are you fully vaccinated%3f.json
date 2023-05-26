@@ -1,0 +1,56 @@
+{
+  "name": "b6d22bf6-e10f-413e-b39a-02fd7a0385d1",
+  "displayName": "Are you fully vaccinated?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are you considered fully vaccinated 💉 against COVID-19 🦠? \n\nPlease note, as per CDC guidelines, you are considered fully vaccinated:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "title": "2 weeks after their second dose in a 2-dose series, such as the Pfizer or Moderna vaccines, or",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "2 weeks after a single-dose vaccine, such as Johnson \u0026 Johnson’s Janssen vaccine",
+          "type": "list"
+        }, {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_fully_vaccinated",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Check for close contact with someone having COVID-19",
+    "name": "24b84592-0fbe-4463-9a23-a35abb8aee08"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_fully_vaccinated",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Check for close contact with someone having COVID-19",
+    "name": "576cf8a8-a165-48b2-aa11-35bd2a8c5be0"
+  } ]
+}

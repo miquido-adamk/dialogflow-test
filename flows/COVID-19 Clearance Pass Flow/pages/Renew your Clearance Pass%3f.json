@@ -1,0 +1,48 @@
+{
+  "name": "53b30b29-5ad5-4c5b-90c1-918ae3fbedfd",
+  "displayName": "Renew your Clearance Pass?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to get a  new Clearance Pass?\n\nPlease note, you will need to go through the health screening process again." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "233c6aca-146f-4c75-9613-5c4fb5ceab32"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Health Screening",
+    "name": "a4f5fa14-5f25-457f-b65b-dc730744a0e5"
+  } ]
+}

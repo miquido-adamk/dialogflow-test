@@ -1,0 +1,66 @@
+{
+  "name": "acd9d90c-ee8b-4fde-a684-355c2542e44a",
+  "displayName": "Call/Show Testing Locations",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "one moment while i look that up." ]
+      },
+      "languageCode": "en"
+    } ],
+    "webhook": "COVID-19-Healthcare-Webhook-Locations",
+    "tag": "find-testing-centers",
+    "setParameterActions": [ {
+      "parameter": "retry_count",
+      "value": "$sys.func.ADD($session.params.retry_count,1)"
+    } ],
+    "returnPartialResponses": true
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.service_api_error = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Webhook Service Error",
+    "name": "b0c4dbd0-f297-4ca3-823a-0c96f556097d"
+  }, {
+    "condition": "$session.params.testing_centers_found = \"false\" AND $session.params.retry_count \u003c= 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Try Again?",
+    "name": "c5c7473f-cb3a-45e4-81c9-6905686f8dbb"
+  }, {
+    "condition": "$session.params.testing_centers_found = \"false\" AND $session.params.retry_count \u003e 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "c2b60715-adac-4c52-8ae3-c028dc95954e"
+  }, {
+    "condition": "$session.params.testing_centers_found = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Disclaimers (if any)",
+    "name": "de1622f9-ce1f-4e7e-8498-38001a614fb1"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Show Webhook Service Error",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "19055d82-a883-47c2-903d-eb404c835568"
+  }, {
+    "targetPage": "Show Webhook Service Error",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "53ad390e-45e9-435c-a06a-3614848d8ca2"
+  } ]
+}

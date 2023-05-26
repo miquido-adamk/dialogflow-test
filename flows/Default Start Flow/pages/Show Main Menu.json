@@ -1,0 +1,33 @@
+{
+  "name": "6df4038a-d25b-47ee-989a-c53f85b6d99f",
+  "displayName": "Show Main Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✅ Get a Clearance Pass"
+          }, {
+            "text": "😷🏡 COVID-19 Symptom Assessment"
+          }, {
+            "text": "🦠💉 Find COVID-19 Vaccine Access Points"
+          }, {
+            "text": "🧫🧑‍🔬 Find COVID-19 Testing locations"
+          }, {
+            "text": "📞 Contact HR representative"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "How can I assist you today?" ]
+      },
+      "languageCode": "en"
+    } ]
+  }
+}

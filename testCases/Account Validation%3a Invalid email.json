@@ -1,0 +1,76 @@
+{
+  "name": "a16eb325-6f2c-40c3-a417-ff72351b1667",
+  "tags": [ "#invalid-employee-email" ],
+  "displayName": "Account Validation: Invalid email",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "issue pass"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_mask_mandated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "clearance-pass",
+        "retry_count": 0
+      },
+      "triggeredIntent": {
+        "name": "head.clearance_pass"
+      },
+      "currentPage": {
+        "name": "Collect Visitor Email",
+        "flow": "Account Validation Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please provide your company's email address. " ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/fb1ad3ae-301b-442e-a72f-2938bb8cd36f",
+        "displayName": "Account Validation Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "invalidemail@pridequest.com"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "is_mask_mandated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "clearance-pass",
+        "retry_count": 1
+      },
+      "currentPage": {
+        "name": "Validate Visitor Email",
+        "flow": "Account Validation Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I could not find that email in our system. Please make sure you are entering your company's email id and not a personal one.\n\nWould you like to try again?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/fb1ad3ae-301b-442e-a72f-2938bb8cd36f",
+        "displayName": "Account Validation Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1629768084,
+    "nanos": 46522000
+  },
+  "testConfig": {
+    "trackingParameters": [ "account_verified" ],
+    "flow": "Default Start Flow"
+  }
+}

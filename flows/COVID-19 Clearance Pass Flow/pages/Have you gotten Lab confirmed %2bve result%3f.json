@@ -1,0 +1,58 @@
+{
+  "name": "aa1800b5-5444-474a-834a-d16067bf45f5",
+  "displayName": "Have you gotten Lab confirmed +ve result?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "In the past 10 days, have you gotten a confirmed positive result from a COVID-19  🦠 diagnostic test 🧑‍🔬? Please note that 10 days is measured from the day you were tested." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_covid19_positive",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Are you fully vaccinated?",
+    "name": "bf37cf04-0896-426e-9611-29b3a220bea1"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_covid19_positive",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "🚫 CC/❌Symptoms/❌Vaccinated",
+    "name": "7fe1945e-b5a1-443b-a461-d9d94281eaa0"
+  }, {
+    "intent": "smalltalk.covid19_not_tested",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_covid19_positive",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Are you fully vaccinated?",
+    "name": "a2fc3502-7bc8-4f0c-93a3-6611e6be6d67"
+  } ]
+}

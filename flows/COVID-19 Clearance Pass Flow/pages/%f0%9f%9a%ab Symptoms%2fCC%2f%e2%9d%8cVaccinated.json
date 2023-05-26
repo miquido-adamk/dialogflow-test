@@ -1,0 +1,23 @@
+{
+  "name": "eaeabff5-3a9b-4aa6-bd55-a0a18a2323be",
+  "displayName": "🚫 Symptoms/CC/❌Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "⛔️ Sorry, for the safety of you and our employees, we can not issue you a clearance pass. \n\nYou are strongly urged to get tested for COVID-19. \n\nPlease continue to work from home and contact your supervisor." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "b8db9788-3e13-4c43-8347-516f0ad95962"
+  } ]
+}

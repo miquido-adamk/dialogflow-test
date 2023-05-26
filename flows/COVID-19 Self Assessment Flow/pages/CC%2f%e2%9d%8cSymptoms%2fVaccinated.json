@@ -1,0 +1,65 @@
+{
+  "name": "db029541-e27e-497a-9337-8812a0c5600c",
+  "displayName": "CC/❌Symptoms/Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You don't need to quarantine.\n\n❗Watch for symptoms for 14 days. \n\n❗Recommend testing at day 3-5 after close contact. \n\n❗If you develop symptoms, you can take this test again or check here:" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.sfdph.org/dph/COVID-19/Isolation-and-Quarantine.asp#symptoms",
+            "text": "Check section - Symptoms of COVID-19 (no known close contact)",
+            "type": "button"
+          }, {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html",
+            "text": "How to protect yourself and others when you’ve been fully vaccinated",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "7fdf9ee0-10f0-434b-9043-8274e305ef4b"
+  } ]
+}

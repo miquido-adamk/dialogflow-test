@@ -1,0 +1,31 @@
+{
+  "name": "20b1356e-563a-4308-b1ce-1766c36ce43e",
+  "displayName": "Validate Visitor Emp ID",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "retry_count",
+      "value": "$sys.func.ADD($session.params.retry_count,1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.account_verified = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "5c507e50-d90b-431e-8b9d-4263b73fb93e"
+  }, {
+    "condition": "$session.params.account_verified = \"false\" AND $session.params.retry_count \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "employee_id",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "2098d74d-338a-40aa-98fc-070c84bd81a7"
+  } ]
+}

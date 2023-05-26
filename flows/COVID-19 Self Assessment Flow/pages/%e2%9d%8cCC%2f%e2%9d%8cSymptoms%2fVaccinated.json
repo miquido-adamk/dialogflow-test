@@ -1,0 +1,43 @@
+{
+  "name": "e931cea5-72af-43c9-aa06-4aca8a5a89f9",
+  "displayName": "❌CC/❌Symptoms/Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "✅  You do not need to quarantine or get tested unless recommended or required by your healthcare provider, employer, or public health official.\n" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html",
+            "text": "How to protect yourself and others when you’ve been fully vaccinated",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "e06c2ece-3033-4221-bc91-219a5154b93a"
+  } ]
+}

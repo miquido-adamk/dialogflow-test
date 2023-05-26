@@ -1,0 +1,48 @@
+{
+  "name": "cf0603eb-e812-48f7-98be-b37ecc77948c",
+  "displayName": "In Close Contact (COVID-19)?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Did you have Close Contact with someone who had COVID-19? " ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "in_close_contact",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Have you been tested for COVID-19?",
+    "name": "d915f078-9064-4936-9a68-66573acc4a0a"
+  }, {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "in_close_contact",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Have you been tested for COVID-19?",
+    "name": "9ecbc3ee-04c9-4e54-af40-2156b0679342"
+  } ]
+}

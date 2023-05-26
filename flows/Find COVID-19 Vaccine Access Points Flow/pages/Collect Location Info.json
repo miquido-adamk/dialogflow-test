@@ -1,0 +1,63 @@
+{
+  "name": "068c44d1-8771-4178-873b-c52e73c8932b",
+  "displayName": "Collect Location Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "preferred_location",
+      "required": true,
+      "entityType": "@sys.location",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please enter your location (ex: 2401 Keith Street, San Francisco 94124)" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please enter your location (ex: 2401 Keith Street, San Francisco)" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "dc5f731b-c88b-41c5-bc63-c8dac2749b07"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please enter your location. At the minimum, please provide the city or zip code (ex: San Francisco, 94124)" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "0be543bd-ce04-413c-8ff5-6c79aa99028b"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preferred_location_provided",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Ask for Drop-in Info",
+    "name": "64ba38c0-5304-4409-b097-1aa2ce683f32"
+  } ]
+}

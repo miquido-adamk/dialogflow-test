@@ -1,0 +1,23 @@
+{
+  "name": "0a1cb030-165a-48e1-ba79-c52fb3619b9f",
+  "displayName": "🚫 Symptoms/CC/Vaccinated ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "⛔️ Sorry, for the safety of you and our employees, we can not issue you a clearance pass. \n\nYou are required to isolate until:\no 10 days have passed from developing symptoms, and\no No fever for 24 hours (without fever-reducing medication), and\no Symptoms are improving.\n\nPlease continue to work from home and contact your supervisor." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "43262eae-ccfe-4863-8adb-bebb2dc0823c"
+  } ]
+}

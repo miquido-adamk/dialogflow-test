@@ -1,0 +1,10 @@
+{
+  "name": "f6564f3e-e179-4f50-b351-bca1474a605c",
+  "displayName": "COVID-19-Healthcare-Webhook-ClearancePass",
+  "genericWebService": {
+    "uri": "https://covid19-healthcare-chatbot.wn.r.appspot.com/clearance-pass"
+  },
+  "timeout": {
+    "seconds": 10
+  }
+}

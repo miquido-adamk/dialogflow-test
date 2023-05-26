@@ -1,0 +1,39 @@
+{
+  "name": "f13dff65-0484-4695-bd77-b6764328fe1b",
+  "displayName": "Generate a new Clearance Pass",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "one moment while i look that up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "COVID-19-Healthcare-Webhook-ClearancePass",
+      "tag": "generate-a-new-pass",
+      "returnPartialResponses": true
+    },
+    "name": "24dfa812-ef97-455e-a09e-7dda82b30b8c"
+  }, {
+    "condition": "$session.params.is_fully_vaccinated = \"true\" AND $session.params.in_close_contact = \"true\" AND $session.params.has_covid19_symptoms = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "☑️ Clearance Pass with conditions",
+    "name": "fce345bb-b4db-4d1a-8397-9b8fac505e1b"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "✅ Clearance Pass",
+    "name": "17e21246-ce53-49bd-8668-f4546286218c"
+  } ]
+}

@@ -1,0 +1,89 @@
+{
+  "name": "a75df236-056f-4190-b12a-367b646ab65a",
+  "displayName": "CC/❌Symptoms/❌Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗You must stay home 😷🏡  until one of the following happens.\n\n1. 10 days have passed since your last close contact, and you had no COVID-19 symptoms during that time\n\n2. 7 days have passed since your last contact; you had no symptoms during that time, and you have a negative COVID-19 test, collected at least 5 days after your last close contact." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.sfdph.org/dph/alerts/covid-guidance/what-to-do-quarantine.pdf",
+            "text": "What to do when you must stay home to prevent the spread of COVID-19",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "text": [ "If you develop symptoms, check section: Symptoms of COVID-19 (no known close contact)", "If you test positive, check section: COVID-19 (positive test or clinical diagnosis) instead." ],
+            "title": "Keep watching closely for symptoms for 14 days after your last contact.",
+            "type": "description"
+          }, {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.sfdph.org/dph/COVID-19/Isolation-and-Quarantine.asp#SummaryChart",
+            "text": "Summary chart: How long do I have to stay home and away from other people?",
+            "type": "button"
+          }, {
+            "event": {
+              "languageCode": "",
+              "name": "",
+              "parameters": {
+              
+              }
+            },
+            "icon": {
+              "color": "#FF9800",
+              "type": "chevron_right"
+            },
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/index.html",
+            "text": "Learn about COVID-19 Vaccines",
+            "type": "button"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_in_progress",
+        "value": "false"
+      }, {
+        "parameter": "operation_name",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "6c3dfe46-2cef-4c1a-935c-fc74d65bdf7f"
+  } ]
+}

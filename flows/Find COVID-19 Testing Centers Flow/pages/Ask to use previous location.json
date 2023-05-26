@@ -1,0 +1,67 @@
+{
+  "name": "b61fdd07-8866-446d-93ec-f2945f4c4f47",
+  "displayName": "Ask to use previous location",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preferred_location",
+        "value": null
+      }, {
+        "parameter": "preferred_location_latitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_longitude",
+        "value": null
+      }, {
+        "parameter": "preferred_location_provided",
+        "value": "false"
+      } ]
+    },
+    "targetPage": "Collect Location Info",
+    "name": "7043ef99-b01e-48a5-963d-1867a67dcc64"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call/Show Testing Locations",
+    "name": "37cf1324-7b66-40aa-8719-073588329086"
+  }, {
+    "condition": "$session.params.preferred_location_provided = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Location Info",
+    "name": "30d92ba7-8bf9-4c19-aee0-7ef42ae479ce"
+  }, {
+    "condition": "$session.params.preferred_location_provided = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to use this location: $session.params.preferred_location.original?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "✔️ Use this location"
+            }, {
+              "text": "❌ No, I would like provide a new location"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a27771dd-4c0a-495a-a060-93afb3b39683"
+  } ]
+}

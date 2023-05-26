@@ -1,0 +1,30 @@
+{
+  "name": "e95a2927-64fc-4755-9bd1-f569149caedd",
+  "displayName": "😷 Mask Mandate Policy",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.is_mask_mandated = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "❗Masks😷 must be worn indoors at all times, regardless of State/County mandate.\n\n❗If certain employees cannot wear a mask for health reasons or other legally protected reasons, please talk to the HR representative to see if there is an alternative solution, such as telecommuting or wearing a face shield with a drape." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Info: Scan your badge on any Electronic Badge Reader",
+    "name": "0834cd92-cc84-4b26-9a3a-4a19c899954b"
+  }, {
+    "condition": "$session.params.is_mask_mandated = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Info: Scan your badge on any Electronic Badge Reader",
+    "name": "7426d504-3104-4e9b-8e24-4b26d0ceff80"
+  } ]
+}

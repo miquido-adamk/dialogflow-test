@@ -1,0 +1,131 @@
+{
+  "name": "8035ec6e-2afb-407f-be59-666578a8813c",
+  "tags": [ "#testing-center-found-webhook" ],
+  "displayName": "Lookup Testing Centers with Webhook",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false"
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the COVID-19 Healthcare virtual agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "find testing centers near me"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "true",
+        "operation_name": "find-testing-centers",
+        "pass_renewal_min_hours": 4,
+        "preferred_location_provided": "false",
+        "retry_count": 0,
+        "service_api_error": "false",
+        "testing_centers_found": "false"
+      },
+      "triggeredIntent": {
+        "name": "head.find_covid19_testing_centers"
+      },
+      "currentPage": {
+        "name": "Collect Location Info",
+        "flow": "Find COVID-19 Testing Centers Flow"
+      },
+      "textResponses": [ {
+        "text": [ "❗If you are experiencing symptoms of COVID-19, such as fever, cough, or shortness of breath, please contact your healthcare provider or telehealth program to discuss whether you should be evaluated for testing.\n\n❗Each coronavirus test provider will determine if testing is appropriate based on your symptoms, risk factors, and test availability.\n\n❗Due to an increase in demand, there may be longer than usual wait times for testing and results in certain areas." ]
+      }, {
+        "text": [ "Please enter your location (ex: 58 Middle Point Rd, San Francisco, CA 94124)" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/0456191e-0f62-4daf-8809-3afd73d000f9",
+        "displayName": "Find COVID-19 Testing Centers Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "58 Middle Point Rd. CA 94124"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4,
+        "preferred_location": {
+          "original": "58 Middle Point Rd. CA 94124",
+          "street-address": "58 Middle Point Rd. CA 94124"
+        },
+        "preferred_location_latitude": 37.735948743589745,
+        "preferred_location_longitude": -122.379519,
+        "preferred_location_provided": "true",
+        "retry_count": 1,
+        "service_api_error": "false",
+        "testing_centers_found": "true"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "one moment while i look that up." ]
+      }, {
+        "text": [ "3 coronavirus testing center(s) within 20 miles of: 58 Middle Point Rd. CA 94124" ]
+      }, {
+        "text": [ "❗Coronavirus test criteria and availability are changing daily. Please call the coronavirus testing site before you go to learn about testing criteria, availability, and hours." ]
+      }, {
+        "text": [ "May I help you with anything else today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1630452253,
+    "nanos": 891180000
+  },
+  "testConfig": {
+    "trackingParameters": [ "testing_centers_found", "preferred_location", "preferred_location_provided" ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "090e8327-3c9f-4aee-a5bd-0f4c108ae2cd",
+  "tags": [ "#self-assessment-from-welcome" ],
+  "displayName": "Default Flow: Request for Self Assessment",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "company_phone": "800-000-001",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the virtual COVID-19 agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "How long to stay?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "company_phone": "800-000-001",
+        "operation_in_progress": "true",
+        "operation_name": "self-assessment",
+        "pass_renewal_min_hours": 4
+      },
+      "triggeredIntent": {
+        "name": "head.covid19_self_assessment"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "COVID-19 Self Assessment Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome to our COVID-19 self-assessment tool. \n\n❗If you are experiencing a life-threatening emergency, such as severe shortness of breath or high fever, call 911.\n\n❗This tool is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a medical professional for serious symptoms or emergencies.\n\n❗All information provided is safe and anonymous." ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/935a6b71-68fa-4f97-adf8-9fb0d8c240bb",
+        "displayName": "COVID-19 Self Assessment Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1629161442,
+    "nanos": 810419000
+  },
+  "testConfig": {
+    "trackingParameters": [ "operation_name" ],
+    "flow": "Default Start Flow"
+  }
+}

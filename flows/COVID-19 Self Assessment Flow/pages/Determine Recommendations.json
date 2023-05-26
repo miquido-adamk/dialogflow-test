@@ -1,0 +1,74 @@
+{
+  "name": "28dde185-0869-4713-b810-e0f515663376",
+  "displayName": "Determine Recommendations",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.covid_testing = \"true\" AND $session.params.has_covid19_symptoms = \"true\" AND $session.params.covid_result = \"positive\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🦠 Positive/🦠 Symptoms",
+    "name": "786a9ee4-4178-4966-8da7-651355844490"
+  }, {
+    "condition": "$session.params.covid_testing = \"true\" AND $session.params.has_covid19_symptoms = \"false\" AND $session.params.covid_result = \"positive\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "🦠 Positive/🦠 Asymptomatic",
+    "name": "cb9758e8-4dcf-4893-8be4-aece51b28ad9"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.in_close_contact = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "❌CC/🦠Symptoms",
+    "name": "ce766036-2a62-4c06-936f-7cadbc8fe6cd"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"true\" AND $session.params.is_fully_vaccinated = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC/❌Symptoms/Vaccinated",
+    "name": "b80cdfe4-bbf1-40a2-b773-1094f3d945c3"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"true\" AND $session.params.is_fully_vaccinated = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC/❌Symptoms/❌Vaccinated",
+    "name": "60ca965a-0da5-4703-ad59-8138768c3dae"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.in_close_contact = \"true\" AND $session.params.is_fully_vaccinated = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC/🦠Symptoms/Vaccinated",
+    "name": "d4291502-6f8f-4670-8d0f-de63fc70001e"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"true\" AND $session.params.in_close_contact = \"true\" AND $session.params.is_fully_vaccinated = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC/🦠Symptoms/❌ Vaccinated",
+    "name": "14b17a43-373a-4f80-9a0e-e67a61060d37"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"false\" AND $session.params.is_fully_vaccinated = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "❌CC/❌Symptoms/Vaccinated",
+    "name": "6545a51b-f73b-4101-ba8f-314d881f478b"
+  }, {
+    "condition": "$session.params.has_covid19_symptoms = \"false\" AND $session.params.in_close_contact = \"false\" AND $session.params.is_fully_vaccinated = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "❌CC/❌Symptoms/❌Vaccinated",
+    "name": "dc374284-4815-4ded-8afd-e0dbc1f26eaf"
+  } ]
+}

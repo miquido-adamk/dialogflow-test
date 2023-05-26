@@ -1,0 +1,68 @@
+{
+  "name": "005adb1e-6b93-4f8f-a6c7-7e25ec7d5db2",
+  "displayName": "Collect Visitor Emp ID",
+  "form": {
+    "parameters": [ {
+      "displayName": "employee_id",
+      "required": true,
+      "entityType": "@employeeId",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please provide your 5 digits Employee ID." ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please provide your 5 digits Employee ID." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2fe927da-9bc1-4c97-a42c-932383374fb9"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, Please enter your 5 digits Employee ID. It should be printed on back of your badge." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "69a1adcb-6a3b-4296-831a-0139894fb523"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Contact HR Rep Flow",
+    "name": "9407c437-360f-4d89-804a-79dc384f3421"
+  }, {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "webhook": "COVID-19-Healthcare-Webhook-ClearancePass",
+      "tag": "validate-account-using-empid"
+    },
+    "targetPage": "Validate Visitor Emp ID",
+    "name": "69fa9506-b5ac-4549-8e39-cd4bc046a0ec"
+  } ]
+}

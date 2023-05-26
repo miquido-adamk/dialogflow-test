@@ -1,0 +1,23 @@
+{
+  "name": "3b57255e-d84b-4f4d-86eb-b8f51f5c32c4",
+  "displayName": "🚫 CC/❌Symptoms/❌Vaccinated",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "⛔️ Sorry, for the safety of you and our employees, we can not issue you a clearance pass. \n\nYou are required to quarantine until 10 days after your exposure. \n\nPlease continue to work from home and contact your supervisor." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything Else?",
+    "name": "ef605baa-5718-44b0-a244-967cc666184f"
+  } ]
+}

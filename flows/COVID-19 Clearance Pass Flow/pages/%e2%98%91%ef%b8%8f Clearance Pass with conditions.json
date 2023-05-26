@@ -1,0 +1,39 @@
+{
+  "name": "35b42222-28d1-47cd-bfe2-731939cd5ab9",
+  "displayName": "☑️ Clearance Pass with conditions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.previous_pass_valid = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "☑️ Your Clearance pass with conditions attached is still valid for another $session.params.expiring_in_hours hours. It will expire on $session.params.expiry_datetime.\n\n❗We advise you to work remotely from home and urge you to stay home as a precautionary measure. Please monitor yourself for symptoms until 14 days after exposure to close contact having COVID-19.\n\n❗If you still need to visit the office, please get the necessary approval from your supervisor. You will be required to show your clearance pass as well as your supervisor's approval to gain entry into the building." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "previous_pass_valid",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "😷 Mask Mandate Policy",
+    "name": "f6ea7eb6-9a26-4531-a3c9-36be0b0e328e"
+  }, {
+    "condition": "$session.params.previous_pass_valid = \"false\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "☑️ Your Clearance pass has been issued with conditions attached and is valid until $session.params.expiry_datetime.\n\n❗We advise you to work remotely from home and urge you to stay home as a precautionary measure. Please monitor yourself for symptoms until 14 days after exposure to close contact having COVID-19.\n\n❗If you still need to visit the office, please get the necessary approval from your supervisor. You will be required to show your clearance pass as well as your supervisor's approval to gain entry into the building." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "😷 Mask Mandate Policy",
+    "name": "b4b44049-d918-425c-87f9-ca1882abaacd"
+  } ]
+}

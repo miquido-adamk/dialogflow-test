@@ -1,0 +1,84 @@
+{
+  "name": "1792d0d2-9293-400d-8dec-86f827430208",
+  "tags": [ "#clearance-pass-from-welcome" ],
+  "displayName": "Default Flow: Request for issuing a Clearance Pass",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "company_phone": "800-000-001",
+        "operation_in_progress": "false",
+        "operation_name": "",
+        "pass_renewal_min_hours": 4
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Show Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there! 👋  I'm the virtual COVID-19 agent. I can help you find resources and provide answers to your COVID-19 questions. Here are some of the things I can help with:" ]
+      }, {
+        "text": [ "How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Issue me a clearance pass"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_verified": "false",
+        "company_phone": "800-000-001",
+        "is_mask_mandated": "true",
+        "operation_in_progress": "true",
+        "operation_name": "clearance-pass",
+        "pass_renewal_min_hours": 4,
+        "retry_count": 0
+      },
+      "triggeredIntent": {
+        "name": "head.clearance_pass"
+      },
+      "currentPage": {
+        "name": "Collect Visitor Email",
+        "flow": "Account Validation Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please provide your company's email address. " ]
+      } ],
+      "currentFlow": {
+        "name": "projects/diskartech-chatbot/locations/us-central1/agents/2b59d911-f136-4340-b170-4a96e8f34527/flows/fb1ad3ae-301b-442e-a72f-2938bb8cd36f",
+        "displayName": "Account Validation Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1629161216,
+    "nanos": 880625000
+  },
+  "testConfig": {
+    "trackingParameters": [ "operation_name" ],
+    "flow": "Default Start Flow"
+  }
+}

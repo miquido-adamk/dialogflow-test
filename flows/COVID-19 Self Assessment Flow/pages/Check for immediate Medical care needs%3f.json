@@ -1,0 +1,53 @@
+{
+  "name": "0aca64ec-2b65-49cd-8b1c-4ef557eff01d",
+  "displayName": "Check for immediate Medical care needs?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are your symptoms getting worse, especially you have trouble breathing. For example, worrisome signs can include:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "title": "Feeling out of breath, dizzy or light-headed when you’re moving around the house, preparing meals, showering or bathing, or doing light housekeeping",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "title": "Dehydration because you are too ill or too tired to eat or drink",
+          "type": "list"
+        }, {
+          "options": [ {
+            "text": "✔️ Yes"
+          }, {
+            "text": "❌ No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "smalltalk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Are you fully vaccinated?",
+    "name": "8c14f63c-ebd7-4845-8470-ce02676c2b9a"
+  }, {
+    "intent": "smalltalk.confirmation_yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "emergency_symptoms_worse",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Emergency Symptoms Guidance",
+    "name": "4067388a-e401-4998-8f81-a6f76ab84283"
+  } ]
+}

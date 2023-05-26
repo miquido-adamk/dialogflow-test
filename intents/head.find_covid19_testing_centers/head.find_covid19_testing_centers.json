@@ -1,0 +1,9 @@
+{
+  "name": "73d968e7-c70f-4209-82ca-1a62cf3ccf6b",
+  "displayName": "head.find_covid19_testing_centers",
+  "parameters": [ {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000
+}
