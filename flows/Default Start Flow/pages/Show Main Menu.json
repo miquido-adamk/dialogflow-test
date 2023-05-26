@@ -35,14 +35,24 @@
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Red",
-            "payload":"<POSTBACK_PAYLOAD>",
-            "image_url":"http://example.com/img/red.png"
+            "title":"✅ Get a Clearance Pass",
+            "payload":"<POSTBACK_PAYLOAD>"
           },{
             "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-            "image_url":"http://example.com/img/green.png"
+            "title":"😷🏡 COVID-19 Symptom Assessment",
+            "payload":"<POSTBACK_PAYLOAD>"
+          },{
+            "content_type":"text",
+            "title":"🦠💉 Find COVID-19 Vaccine Access Points",
+            "payload":"<POSTBACK_PAYLOAD>"
+          },{
+            "content_type":"text",
+            "title":"🧫🧑‍🔬 Find COVID-19 Testing locations",
+            "payload":"<POSTBACK_PAYLOAD>"
+          },{
+            "content_type":"text",
+            "title":"📞 Contact HR representative",
+            "payload":"<POSTBACK_PAYLOAD>"
           }
         ]
       },
