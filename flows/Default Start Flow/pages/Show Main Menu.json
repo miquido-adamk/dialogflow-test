@@ -25,6 +25,9 @@
       "languageCode": "en"
     }, {
       "payload": {
+        "text": {
+          "text":["sss"]
+        },
         "quick_replies":[
           {
             "content_type":"text",
