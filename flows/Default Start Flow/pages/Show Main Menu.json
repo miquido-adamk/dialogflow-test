@@ -25,7 +25,7 @@
       "languageCode": "en"
     }, {
       "text": {
-        "text": [ "Pick option" ],
+        "text": "Pick option",
         "quick_replies":[
           {
             "content_type":"text",
@@ -39,7 +39,7 @@
         ]
       },
       "languageCode": "en"
-    } {
+    }, {
       "text": {
         "text": [ "How can I assist you today?" ]
       },
