@@ -5,51 +5,52 @@
   
   },
   "entryFulfillment": {
-    "messages": [ {
-      "payload": {
-        "facebook": {
-          "attachment": {
-            "type": "template",
-            "payload": {
-              "elements": [
+
+    "facebook": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "elements": [
+            {
+              "title": "More",
+              "buttons": [
                 {
-                  "title": "More",
-                  "buttons": [
-                    {
-                      "title": "more",
-                      "payload": "more",
-                      "type": "postback"
-                    }
-                  ],
-                  "subtitle": "",
-                  "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+                  "title": "more",
+                  "payload": "more",
+                  "type": "postback"
                 }
               ],
-              "template_type": "generic"
+              "subtitle": "",
+              "image_url": "https://i.imgur.com/sI1VUsV.jpg"
             }
-          }
-        },
+          ],
+          "template_type": "generic"
+        }
+      }
+    },
 
-        "attachment": {
-          "type": "template",
-          "payload": {
-            "elements": [
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "elements": [
+          {
+            "title": "More2",
+            "buttons": [
               {
-                "title": "More",
-                "buttons": [
-                  {
-                    "title": "more",
-                    "payload": "more",
-                    "type": "postback"
-                  }
-                ],
-                "subtitle": "",
-                "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+                "title": "more",
+                "payload": "more",
+                "type": "postback"
               }
             ],
-            "template_type": "generic"
+            "subtitle": "",
+            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
           }
-        },
+        ],
+        "template_type": "generic"
+      }
+    },
+    "messages": [ {
+      "payload": {
         "richContent": [ [ {
           "options": [ {
             "text": "✅ Get a Clearance Pass"
