@@ -26,6 +26,7 @@
     }, {
       "payload": {
         "attachment": {
+          "type": "image"
         },
         "quick_replies":[
           {
@@ -42,7 +43,7 @@
             "payload":"<POSTBACK_PAYLOAD>"
           },{
             "content_type":"text",
-            "title":"🧫🧑‍🔬 Find COVID-19 Testing locations",
+            "title":"😷🏡 COVID-19 Symptom Assessment",
             "payload":"<POSTBACK_PAYLOAD>"
           },{
             "content_type":"text",
