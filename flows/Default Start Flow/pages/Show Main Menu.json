@@ -6,7 +6,7 @@
   },
   "entryFulfillment": {
     "messages": [ {
-      "payload": [{
+      "payload": {
         "richContent": [ [ {
           "options": [ {
             "text": "✅ Get a Clearance Pass"
@@ -21,11 +21,11 @@
           } ],
           "type": "chips"
         } ] ]
-      }],
+      },
       "languageCode": "en"
     }, {
       "text": {
-        "text": [ "How can I assist you today?" ],
+        "text": [ "How can I assist you today?" ]
       },
       "languageCode": "en"
     } ]
