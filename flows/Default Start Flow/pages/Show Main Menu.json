@@ -7,10 +7,47 @@
   "entryFulfillment": {
     "messages": [ {
       "payload": {
+        "facebook": {
+          "attachment": {
+            "type": "template",
+            "payload": {
+              "elements": [
+                {
+                  "title": "More",
+                  "buttons": [
+                    {
+                      "title": "more",
+                      "payload": "more",
+                      "type": "postback"
+                    }
+                  ],
+                  "subtitle": "",
+                  "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+                }
+              ],
+              "template_type": "generic"
+            }
+          }
+        },
+
         "attachment": {
-          "type": "image",
+          "type": "template",
           "payload": {
-            "url": "http://placekitten.com/g/200/300"
+            "elements": [
+              {
+                "title": "More",
+                "buttons": [
+                  {
+                    "title": "more",
+                    "payload": "more",
+                    "type": "postback"
+                  }
+                ],
+                "subtitle": "",
+                "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+              }
+            ],
+            "template_type": "generic"
           }
         },
         "richContent": [ [ {
