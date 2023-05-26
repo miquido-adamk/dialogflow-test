@@ -24,9 +24,6 @@
       },
       "languageCode": "en"
     }, {
-      "text": {
-        "text": ["Pick option"]
-      },
       "payload": {
         "attachment": {
           "type": "image",
