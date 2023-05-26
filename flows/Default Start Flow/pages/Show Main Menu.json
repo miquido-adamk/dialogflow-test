@@ -25,6 +25,13 @@
       "languageCode": "en"
     }, {
       "payload": {
+        "attachment": {
+          "type": "image",
+          "payload": {
+            "is_reusable": true,
+            "url": "https://avatars1.githubusercontent.com/u/36980416"
+          }
+        },
         "quick_replies":[
           {
             "content_type":"text",
