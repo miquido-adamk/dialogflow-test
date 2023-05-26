@@ -31,7 +31,7 @@
           "payload":{
             "template_type":"generic",
             "elements":[
-              {
+               {
                 "title":"Welcome!",
                 "image_url":"https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
                 "subtitle":"We have the right hat for everyone.",
@@ -42,20 +42,14 @@
                 },
                 "buttons":[
                   {
+                    "type":"web_url",
+                    "url":"https://www.originalcoastclothing.com/",
+                    "title":"View Website"
+                  },{
                     "type":"postback",
-                    "title":"✅ Get a Clearance Pass",
+                    "title":"Start Chatting",
                     "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },     
-                  {
-                    "type":"postback",
-                    "title":"😷🏡 COVID-19 Symptom Assessment",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },     
-                  {
-                    "type":"postback",
-                    "title":"🦠💉 Find COVID-19 Vaccine Access Points",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  }      
+                  }              
                 ]      
               }
             ]
