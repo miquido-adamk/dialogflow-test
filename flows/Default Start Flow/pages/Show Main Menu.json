@@ -20,8 +20,12 @@
             "text": "📞 Contact HR representative"
           } ],
           "type": "chips"
-        } ] ],
-        "text": "Pick a color:",
+        } ] ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Pick option" ],
         "quick_replies":[
           {
             "content_type":"text",
@@ -35,7 +39,7 @@
         ]
       },
       "languageCode": "en"
-    }, {
+    } {
       "text": {
         "text": [ "How can I assist you today?" ]
       },
