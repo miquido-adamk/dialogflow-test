@@ -25,18 +25,7 @@
       "languageCode": "en"
     }, {
       "text": {
-        "text": "Pick option",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Red",
-            "payload":"rdeč"
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"zelen"
-          }
-        ]
+        "text": ["Pick option"]
       },
       "languageCode": "en"
     }, {
