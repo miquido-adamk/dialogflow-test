@@ -20,11 +20,7 @@
             "text": "📞 Contact HR representative"
           } ],
           "type": "chips"
-        } ] ]
-      },
-      "languageCode": "en"
-    }, {
-      "payload": {
+        } ] ],
         "quick_replies":[
           {
             "content_type":"text",
